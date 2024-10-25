@@ -11,7 +11,8 @@ import CreateContestStep8 from "../components/popups/CreateContestStep8";
 import CreateContestStep9 from "../components/popups/CreateContestStep9";
 import CreateContestStep10 from "../components/popups/CreateContestStep10";
 import CreateContestStep11 from "../components/popups/CreateContestStep11";
-
+import { RxCross1 } from "react-icons/rx";
+import { IoArrowBack } from "react-icons/io5";
 const MyChannel: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [step, setStep] = useState(1); // Track the current step
@@ -46,6 +47,12 @@ const MyChannel: React.FC = () => {
 
   const nextStep = () => {
     setStep((prevStep) => prevStep + 1); // Go to the next step
+  };
+
+  const prevStep = () => {
+    if (step > 1) {
+      setStep((prevStep) => prevStep - 1);
+    }
   };
 
   const toggleWeekSelection = (week: string) => {
@@ -198,11 +205,19 @@ const MyChannel: React.FC = () => {
           {isModalOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
               <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl relative">
+                {step > 1 && (
+                  <button
+                    className="absolute top-8 left-4 text-gray-500 hover:text-gray-700"
+                    onClick={prevStep}
+                  >
+                    <IoArrowBack className="text-xl" />
+                  </button>
+                )}
                 <button
                   className="absolute top-2 right-4 text-gray-500 hover:text-gray-700"
                   onClick={closeModal}
                 >
-                  &times;
+                  <RxCross1 className="text-xl md:mt-5 absolute mt-6 right-5 md:right-5 " />
                 </button>
 
                 {step === 1 && (

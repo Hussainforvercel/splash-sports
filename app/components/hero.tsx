@@ -48,7 +48,7 @@ export function Hero() {
             <CarouselItem key={index}>
               <div className="flex flex-wrap items-center justify-between">
                 {/* Left side content */}
-                <div className="text-white space-y-4 max-w-full md:max-w-md md:pl-10">
+                <div className="text-white  md:ml-10 space-y-4 max-w-full md:max-w-2xl md:pl-10">
                   <h2 className="text-xl md:text-4xl lg:text-4xl font-bold whitespace-nowrap">
                     KELLY & MURRAY $50K CFB SURVIVOR <br /> BY KELLYINVEGAS
                   </h2>
@@ -74,16 +74,16 @@ export function Hero() {
                   </div>
 
                   {/* Flex container for icon and button text */}
-                  <div className="flex items-center space-x-2 mt-6 md:mt-10">
+                  <div className="flex items-center space-x-2  mt-6 md:mt-10">
                     <button className="bg-red-500 text-white px-3 md:px-8 py-2 md:py-4 rounded-lg">
                       Play for $100
                     </button>
 
                     {/* Flex container for icon and button text */}
                     <div className="flex items-center space-x-2 ml-4">
-                      <div className="flex items-center space-x-2">
-                        <IoInformationCircleOutline className="w-6 h-6 md:w-8 md:h-8 text-red-500 cursor-pointer" />
-                        <span className="text-red-500 text-sm md:text-lg font-semibold">
+                      <div className="flex items-center space-x-5">
+                        <IoInformationCircleOutline className="w-6 h-6 md:pl-10 md:w-24 md:h-20 text-red-500 cursor-pointer" />
+                        <span className="text-red-500 text-sm md:text-xl font-semibold">
                           Visit contest detail
                         </span>
                       </div>

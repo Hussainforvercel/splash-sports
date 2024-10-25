@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #e6e6e6; /* Use CSS to apply the background color */
 }
 
 @layer utilities {
@@ -16,4 +17,13 @@ body {
   :root {
     --radius: 0.5rem;
   }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }

@@ -29,7 +29,7 @@ const CreateContestStep2: React.FC<Step2Props> = ({
 
       <div className="grid grid-cols-2 gap-4 mb-6">
         <button
-          className={`border-2 rounded-md p-4 flex items-center justify-start ${
+          className={`border-2 rounded-md p-4 pl-10 md:pl-5 flex items-center justify-start ${
             selectedContestType === "PickEm"
               ? "border-red-500"
               : "border-gray-300"
@@ -69,7 +69,7 @@ const CreateContestStep2: React.FC<Step2Props> = ({
           One & Done: Fantasy Points
         </button>
         <button
-          className={`border-2 rounded-md p-4 flex items-center justify-start ${
+          className={`border-2 rounded-md p-4 pl-10 md:pl-5 flex items-center justify-start ${
             selectedContestType === "Survivor"
               ? "border-red-500"
               : "border-gray-300"

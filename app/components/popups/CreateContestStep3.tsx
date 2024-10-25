@@ -13,7 +13,7 @@ const CreateContestStep3: React.FC<Step3Props> = ({
   nextStep,
 }) => {
   return (
-    <>
+    <div className="overflow-y-auto scrollbar-hide h-screen md:h-auto p-4">
       <h2 className="text-2xl text-center font-semibold mb-4">
         Create a Contest
       </h2>
@@ -27,9 +27,9 @@ const CreateContestStep3: React.FC<Step3Props> = ({
         Select the weeks to include in your contest.
       </p>
 
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <button
-          className={`border-2 rounded-md p-4 flex items-center justify-start ${
+          className={`border-2 rounded-md p-4 flex items-center justify-center ${
             selectedWeeks.includes("All Weeks")
               ? "border-red-500"
               : "border-gray-300"
@@ -57,7 +57,7 @@ const CreateContestStep3: React.FC<Step3Props> = ({
         ].map((weekItem) => (
           <button
             key={weekItem.week}
-            className={`border-2 rounded-md p-4 flex flex-col items-center justify-start ${
+            className={`border-2 rounded-md p-4 flex flex-col items-center justify-center ${
               selectedWeeks.includes(weekItem.week)
                 ? "border-red-500"
                 : "border-gray-300"
@@ -70,17 +70,6 @@ const CreateContestStep3: React.FC<Step3Props> = ({
         ))}
       </div>
 
-      {/* <button
-        className={`w-full py-3 bg-[#FF4747] text-black rounded-lg ${
-          selectedWeeks.length > 0
-            ? "hover:bg-red-300"
-            : "opacity-50 cursor-not-allowed"
-        }`}
-        disabled={selectedWeeks.length === 0}
-      >
-        Next
-      </button> */}
-
       <button
         className={`w-full py-3 bg-[#FF4747] text-black rounded-lg ${
           selectedWeeks.length > 0
@@ -88,11 +77,11 @@ const CreateContestStep3: React.FC<Step3Props> = ({
             : "opacity-50 cursor-not-allowed"
         }`}
         disabled={selectedWeeks.length === 0}
-        onClick={nextStep} // This will work now
+        onClick={nextStep}
       >
         Next
       </button>
-    </>
+    </div>
   );
 };
 

@@ -30,21 +30,21 @@ const CreateContestStep9: React.FC<Step9Props> = ({ nextStep }) => {
         <table className="table-auto mx-auto w-full mb-6 border-collapse border-t border-gray-300">
           <thead>
             <tr>
-              <th className="text-left pl-4 py-2">Prize Position</th>
-              <th className="text-center py-2">Percentage</th>
+              <th className="text-left  pl-4 py-2">Prize Position</th>
+              <th className="text-center py-2 pr-5 md:pr-28">Percentage</th>
               <th className="text-right pr-4 py-2">Payout</th>
             </tr>
           </thead>
           <tbody>
             {prizeDistribution.map((prize, index) => (
               <tr key={index}>
-                <td className="py-2 border-t border-gray-300 text-left">
+                <td className="py-2  pl-10 border-t border-gray-300 text-left">
                   {prize.position}
                 </td>
-                <td className="py-2 border-t border-gray-300 text-center">
+                <td className="py-2 border-t pr-8 md:pr-28 border-gray-300 text-center">
                   {prize.percentage}
                 </td>
-                <td className="py-2 border-t border-gray-300 text-right">
+                <td className="py-2 border-t pr-5 border-gray-300 text-right">
                   {prize.payout}
                 </td>
               </tr>

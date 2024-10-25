@@ -14,7 +14,9 @@ const CreateContestStep1: React.FC<Step1Props> = ({
 }) => {
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-4">Create a Contest</h2>
+      <h2 className="text-2xl text-center font-semibold mb-4">
+        Create a Contest
+      </h2>
 
       <div className="w-full h-2 bg-gray-200 rounded-full mb-6">
         <div className="bg-red-500 h-full rounded-full w-1/4"></div>

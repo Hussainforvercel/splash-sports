@@ -2,12 +2,14 @@
 
 import React, { useState } from "react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 interface LoginProps {
   onLogin: () => void;
 }
 
 export default function Login({ onLogin }: LoginProps) {
+  const router = useRouter(); // Initialize router
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +20,7 @@ export default function Login({ onLogin }: LoginProps) {
     if (email && password) {
       localStorage.setItem("isLoggedIn", "true");
       onLogin();
+      router.push("/"); // Redirect to home page after login
     } else {
       alert("Please enter both email and password.");
     }

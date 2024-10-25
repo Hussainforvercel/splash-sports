@@ -34,7 +34,7 @@ const CreateContestStep6: React.FC<Step6Props> = ({
   };
 
   return (
-    <>
+    <div className="overflow-y-auto h-screen md:h-auto p-4">
       <h2 className="text-2xl text-center font-semibold mb-4">
         Create a Contest
       </h2>
@@ -44,10 +44,10 @@ const CreateContestStep6: React.FC<Step6Props> = ({
         <div className="bg-red-500 h-full rounded-full w-5/6"></div>
       </div>
 
-      <h3 className="text-lg font-semibold mb-2">
+      <h3 className="text-lg  mb-2 text-center md:text-left">
         Set the maximum amount of anticipated entries
       </h3>
-      <p className="text-gray-500 mb-6">
+      <p className="text-gray-500 mb-6 text-center md:text-left">
         This will determine the prize pot for your contest. We recommend
         estimating on the higher end. If you end up selecting an amount that is
         too high, your contest will just resize down based on the contest
@@ -55,11 +55,11 @@ const CreateContestStep6: React.FC<Step6Props> = ({
       </p>
 
       {/* Predefined Entry Buttons */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
         {predefinedEntries.map((entry) => (
           <button
             key={entry}
-            className={`border-2 rounded-md p-4 flex items-center justify-center ${
+            className={`border-2 rounded-md p-4 flex items-center justify-center text-lg ${
               anticipatedEntries === entry
                 ? "border-red-500"
                 : "border-gray-300"
@@ -71,7 +71,7 @@ const CreateContestStep6: React.FC<Step6Props> = ({
         ))}
         {/* Custom Entry Button */}
         <button
-          className={`border-2 rounded-md p-4 flex items-center justify-center ${
+          className={`border-2 rounded-md p-4 flex items-center justify-center text-lg  ${
             anticipatedEntries === customEntries
               ? "border-red-500"
               : "border-gray-300"
@@ -89,13 +89,13 @@ const CreateContestStep6: React.FC<Step6Props> = ({
           value={customEntries}
           onChange={handleCustomEntryChange}
           placeholder="Enter custom number"
-          className="border-2 rounded-md p-4 w-full mb-6"
+          className="border-2 rounded-md p-4 w-full mb-6 text-lg"
         />
       )}
 
       {/* Next Button */}
       <button
-        className={`w-full py-3 bg-[#FF4747] text-black rounded-lg ${
+        className={`w-full py-3 bg-[#FF4747] text-black rounded-lg text-lg  ${
           anticipatedEntries
             ? "hover:bg-red-300"
             : "opacity-50 cursor-not-allowed"
@@ -105,7 +105,7 @@ const CreateContestStep6: React.FC<Step6Props> = ({
       >
         Next
       </button>
-    </>
+    </div>
   );
 };
 

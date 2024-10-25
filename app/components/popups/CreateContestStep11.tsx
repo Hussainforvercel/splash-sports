@@ -17,7 +17,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
   const [picksPerGame, setPicksPerGame] = useState("All Games");
 
   return (
-    <>
+    <div className="h-screen md:h-auto overflow-y-auto scrollbar-hide p-4 md:p-6 lg:p-8 max-w-4xl mx-auto">
       <h2 className="text-2xl text-center font-semibold mb-4">
         Advance Settings
       </h2>
@@ -28,10 +28,10 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
       </div>
 
       {/* Form Grid */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
         {/* Discoverability */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
+          <label className="block text-left text-lg  mb-2">
             Discoverability
           </label>
           <select
@@ -46,9 +46,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Chat */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
-            Chat
-          </label>
+          <label className="block text-left text-lg  mb-2">Chat</label>
           <select
             value={chat}
             onChange={(e) => setChat(e.target.value)}
@@ -61,7 +59,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Weighted Score */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
+          <label className="block text-left text-lg  mb-2">
             Weighted Score
           </label>
           <select
@@ -76,9 +74,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Best Pick */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
-            Best Pick
-          </label>
+          <label className="block text-left text-lg  mb-2">Best Pick</label>
           <select
             value={bestPick}
             onChange={(e) => setBestPick(e.target.value)}
@@ -91,7 +87,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Best Pick Week */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
+          <label className="block text-left text-lg  mb-2">
             Best Pick Week
           </label>
           <select
@@ -108,7 +104,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Against the Spread */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
+          <label className="block text-left text-lg  mb-2">
             Against the Spread
           </label>
           <select
@@ -123,9 +119,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Pick Deadline */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
-            Pick Deadline
-          </label>
+          <label className="block text-left text-lg  mb-2">Pick Deadline</label>
           <select
             value={pickDeadline}
             onChange={(e) => setPickDeadline(e.target.value)}
@@ -138,7 +132,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Individual Games */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
+          <label className="block text-left text-lg  mb-2">
             Individual Games
           </label>
           <select
@@ -153,9 +147,7 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
         {/* Picks per Game */}
         <div>
-          <label className="block text-left text-lg font-semibold mb-2">
-            Picks per Games
-          </label>
+          <label className="block text-left text-lg mb-2">Picks per Game</label>
           <select
             value={picksPerGame}
             onChange={(e) => setPicksPerGame(e.target.value)}
@@ -169,12 +161,12 @@ const CreateContestStep11: React.FC<Step11Props> = ({ handleSubmit }) => {
 
       {/* Submit Button */}
       <button
-        className="w-full py-3 bg-[#FF4747] text-black rounded-lg hover:bg-red-300"
+        className="w-full py-3 bg-[#FF4747] text-black rounded-lg text-lg  hover:bg-red-300"
         onClick={handleSubmit}
       >
         Submit
       </button>
-    </>
+    </div>
   );
 };
 

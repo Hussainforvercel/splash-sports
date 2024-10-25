@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css"; // Import nprogress CSS
 
 export default function Footer() {
   return (
@@ -88,9 +91,16 @@ export default function Footer() {
                       Deposit
                     </a>
                   </li>
-                  <Link href="/withdraw">
-                    <li className="mb-4">Withdrawal</li>
+                  <Link href="/withdraw" passHref>
+                    <div
+                      onClick={() => {
+                        NProgress.start(); // Start loading indicator
+                      }}
+                    >
+                      <li className="mb-4">Withdrawal</li>
+                    </div>
                   </Link>
+
                   <li className="mb-4">
                     <a href="#" className="hover:text-gray-400">
                       Transaction History

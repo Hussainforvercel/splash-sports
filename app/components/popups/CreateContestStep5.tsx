@@ -28,8 +28,8 @@ const CreateContestStep5: React.FC<Step5Props> = ({
   };
 
   return (
-    <>
-      <h2 className="text-2xl text-center font-semibold mb-4">
+    <div className="overflow-y-auto h-screen md:h-auto p-4">
+      <h2 className="text-xl text-center font-semibold mb-4">
         Create a Contest
       </h2>
 
@@ -38,17 +38,17 @@ const CreateContestStep5: React.FC<Step5Props> = ({
         <div className="bg-red-500 h-full rounded-full w-3/4"></div>
       </div>
 
-      <h3 className="text-lg font-semibold mb-2">Set the entry fee</h3>
+      <h3 className="text-lg  mb-2">Set the entry fee</h3>
       <p className="text-gray-500 mb-6">
         Set the cost per entry for your contest.
       </p>
 
       {/* Predefined Entry Fee Buttons */}
-      <div className="grid grid-cols-5 gap-4 mb-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-6">
         {predefinedFees.map((fee) => (
           <button
             key={fee}
-            className={`border-2 rounded-md p-4 flex items-center justify-center ${
+            className={`border-2 rounded-md p-4 flex items-center justify-center text-lg  ${
               customFee === fee ? "border-red-500" : "border-gray-300"
             }`}
             onClick={() => handleFeeSelection(fee)}
@@ -59,18 +59,18 @@ const CreateContestStep5: React.FC<Step5Props> = ({
       </div>
 
       {/* Custom Entry Fee Input */}
-      <h3 className="text-lg font-semibold mb-2">Set a Custom Entry Fee</h3>
+      <h3 className="text-lg  mb-2">Set a Custom Entry Fee</h3>
       <input
         type="text"
-        placeholder="5$"
+        placeholder="Enter your custom fee"
         value={customFee}
         onChange={handleCustomFeeChange}
-        className="border-2 rounded-md p-4 w-full mb-6"
+        className="border-2 rounded-md p-4 w-full mb-6 text-lg"
       />
 
       {/* Next Button */}
       <button
-        className={`w-full py-3 bg-[#FF4747] text-black rounded-lg ${
+        className={`w-full py-3 bg-[#FF4747] text-black rounded-lg text-lg ${
           customFee ? "hover:bg-red-300" : "opacity-50 cursor-not-allowed"
         }`}
         disabled={!customFee} // Disable button if no fee is set
@@ -78,7 +78,7 @@ const CreateContestStep5: React.FC<Step5Props> = ({
       >
         Next
       </button>
-    </>
+    </div>
   );
 };
 
