@@ -93,7 +93,7 @@ export function Hero() {
                   {/* <p className="mt-4 text-xs md:text-sm bg-[#FF4747] px-10 opacity-80">
                     1d 6h
                   </p> */}
-                  <button className="mt-4 text-xs md:text-sm  bg-[#FF4747]  opacity-60 md:px-5 md:py-1 md:rounded-2xl">
+                  <button className="mt-4 text-xs md:text-sm  bg-[#FF4747]  opacity-60 px-3 rounded-2xl py-1 md:px-5 md:py-1 md:rounded-2xl">
                     1d 6h
                   </button>
                 </div>

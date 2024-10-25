@@ -83,7 +83,7 @@ export function NFLWeeklyPickEmConfidence() {
           }}
           className="w-full max-w-full"
         >
-          <CarouselContent className="flex w-full pl-2 md:pl-5">
+          <CarouselContent className="flex w-full pl-7 md:pl-5">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}

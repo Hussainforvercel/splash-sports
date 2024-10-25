@@ -123,17 +123,17 @@ const Navbar: FC = () => {
         )}
 
         {isLoggedIn ? (
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <div className="relative">
                 <div
-                  className="bg-red-500 w-10 h-10 flex mr-5 cursor-pointer items-center justify-center rounded-full text-white font-bold"
+                  className="bg-red-500 w-10 h-10 flex cursor-pointer items-center justify-center rounded-full text-white font-bold"
                   onClick={toggleProfileMenu}
                 >
                   B
                 </div>
                 {isProfileMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-96 bg-white text-black rounded-lg shadow-lg z-10">
+                  <div className="absolute left-1/5 transform -translate-x-1/2 mt-2 w-96 bg-white text-black rounded-lg shadow-lg z-10 md:right-0 md:left-auto md:transform-none">
                     <div className="p-4 border-b flex items-center">
                       <Link href="/profile" passHref>
                         <div
@@ -200,7 +200,7 @@ const Navbar: FC = () => {
                   </div>
                 )}
               </div>
-              <div className="border-l px-4">
+              <div className="border-l px-4 hidden md:block">
                 <p className="text-red-500 text-sm text-right font-semibold">
                   $100
                 </p>
@@ -212,7 +212,7 @@ const Navbar: FC = () => {
                 NProgress.start();
                 router.push("/deposit");
               }}
-              className="bg-red-500 px-9 py-3 rounded-sm hover:bg-red-600 transition text-white font-semibold"
+              className="bg-red-500 px-9 py-3 rounded-sm hover:bg-red-600 transition text-white font-semibold hidden md:block"
             >
               Deposit
             </button>
