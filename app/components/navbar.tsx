@@ -46,11 +46,11 @@ const Navbar: FC = () => {
   const toggleSearchBar = () => setIsSearchBarVisible(!isSearchBarVisible);
 
   return (
-    <nav className="bg-[#2D2D2D] text-white px-6 py-4 flex items-center justify-between relative">
+    <nav className="bg-[#2D2D2D] text-white md:px-2 lg:px-3 xl:px-6  py-4 flex items-center justify-between relative">
       <div className="flex items-center space-x-16">
         {/* Logo */}
         <a
-          className="md:text-3xl font-bold cursor-pointer"
+          className="lg:text-xl md:text-sm font-bold cursor-pointer"
           onClick={() => router.push("/")}
         >
           Splash Sports
@@ -58,7 +58,7 @@ const Navbar: FC = () => {
 
         {/* Navigation Links (Visible on Desktop) */}
         {isLoggedIn && (
-          <div className="hidden md:flex md:text-xl space-x-8">
+          <div className="hidden md:flex  md:text-xs lg:text-xl md:space-x-3 lg:space-x-3 xl:space-x-8">
             <span
               onClick={() => router.push("/")}
               className={`${
