@@ -140,6 +140,7 @@ const Navbar: FC = () => {
                           className="bg-red-500 w-10 h-10 flex mr-3 cursor-pointer items-center justify-center rounded-full text-white font-bold"
                           onClick={() => {
                             NProgress.start(); // Start loading indicator
+                            setIsProfileMenuOpen(false);
                           }}
                         >
                           B

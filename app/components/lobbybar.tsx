@@ -13,7 +13,7 @@ const LobbyBar: React.FC = () => {
   return (
     <div className="min-h-44 bg-gray-100 p-6 flex flex-col items-start">
       {/* Top Row with Icons */}
-      <div className="flex justify-start space-x-8 mb-6 w-full">
+      <div className="flex flex-wrap justify-start space-x-4 md:space-x-8 mb-6 w-full">
         <div className="flex flex-col items-center space-y-2">
           <div className="flex justify-center items-center w-12 h-12 rounded-full bg-black text-white">
             <FaFootballBall size={24} />
@@ -37,7 +37,7 @@ const LobbyBar: React.FC = () => {
       </div>
 
       {/* Middle Tab Navigation */}
-      <div className="flex justify-between w-full max-w-8xl bg-white rounded-xl p-2 mb-6">
+      <div className="flex flex-wrap justify-between w-full max-w-8xl bg-white rounded-xl p-2 mb-6">
         <button className="px-4 py-2 text-red-500 font-semibold">All</button>
         <button className="px-4 py-2 text-gray-700">Survivor</button>
         <button className="px-4 py-2 text-gray-700">Pick'Em</button>
@@ -46,7 +46,7 @@ const LobbyBar: React.FC = () => {
       </div>
 
       {/* Bottom Filters (Fixed to display in one row and aligned left) */}
-      <div className="flex justify-start space-x-4 w-full">
+      <div className="flex flex-wrap justify-start space-x-4 space-y-2 md:space-y-0 w-full">
         <div className="relative">
           <button
             className="flex items-center bg-gray-200 text-gray-700 py-2 px-4 rounded-full"
